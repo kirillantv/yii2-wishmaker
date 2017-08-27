@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of Yii2-Swap project
+ * This file is part of Yii2-Wishmaker project
  * (c) kirillantv <http://github.com/kirillantv/>
  * 
  * For more information read README and LICENSE file 
@@ -54,6 +54,10 @@ class Wish extends \yii\db\ActiveRecord
 			];
 	}
 	
+	public static function find()
+	{
+		return new \kirillantv\wishmaker\models\query\WishQuery(get_called_class());
+	}
 	public function getUser()
 	{
 		return $this->hasOne(Yii::$app->user->identityClass, ['id' => 'user_id']);

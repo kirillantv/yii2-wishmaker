@@ -1,6 +1,6 @@
 <?php 
 /**
- * This file is part of Yii2-Swap project
+ * This file is part of Yii2-Wishmaker project
  * (c) kirillantv <http://github.com/kirillantv/>
  * 
  * For more information read README and LICENSE file 

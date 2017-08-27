@@ -1,18 +1,11 @@
-<?php 
+<?php
 /**
  * This file is part of Yii2-Wishmaker project
  * (c) kirillantv <http://github.com/kirillantv/>
  * 
  * For more information read README and LICENSE file 
  */
-
-namespace kirillantv\wishmaker;
-
-class Module extends \yii\base\Module
-{
-	public function init() 
-	{
-		parent::init();
-	}
-}
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
 ?>
+<?= $this->render('_form', ['wish' => $wish]); ?>
