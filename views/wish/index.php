@@ -8,10 +8,23 @@
 use yii\helpers\Html;
 ?>
 <div class="col-xs-12">
-	<?= Html::a('Add wish', ['create'], ['class' => 'btn btn-primary']); ?>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="row">
+				<?= Html::a('Add wish', ['create'], ['class' => 'btn btn-primary']); ?>	
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="col-xs-12">
+			<div class="row">
+				<?php foreach ($model as $wish): ?>
+				<div class="well well-sm">
+					<?= $wish->wish ?>	
+				</div>
+				<?php endforeach; ?>		
+			</div>
+		</div>		
+	</div>
 </div>
-<?php foreach ($model as $wish): ?>
-<span class="well">
-	<?= $wish->wish ?>	
-</span>
-<?php endforeach; ?>
+
