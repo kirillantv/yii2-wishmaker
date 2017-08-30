@@ -32,4 +32,10 @@ class WishController extends \yii\web\Controller
 			return $this->render('create', ['wish' => $wish]);
 		}
 	}
+	
+	public function actionWishmaker()
+	{
+		$model = Yii::$app->controller->module->recommendations;
+		return $this->render('wishmaker', ['model' => $model]);
+	}
 }

@@ -10,6 +10,10 @@ namespace kirillantv\wishmaker\models\query;
 
 class WishQuery extends \yii\db\ActiveQuery
 {
+	public function user($user)
+	{
+		return $this->where(['user_id' => $user]);
+	}
 
     public function all($db = null)
     {
